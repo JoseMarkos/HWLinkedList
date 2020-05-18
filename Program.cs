@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HWCovid19Symptoms
 {
@@ -6,9 +7,7 @@ namespace HWCovid19Symptoms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            Node head = new Node(1);
+            Controller.Show();
         }
     }
 }

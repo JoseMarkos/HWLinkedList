@@ -1,14 +1,20 @@
 using System;
+using System.Collections.Generic;
 
 namespace HWCovid19Symptoms {
-    sealed class Printer {
-        public static void Print(LinkedList list)
+    sealed class Printer 
+    {
+        public static void Print(LinkedList<string> list)
         {
-            unsafe {
-                fixed (int* ptr = &list.Head.Data) {
-                   
-                }
-                
+            System.Console.WriteLine("Syntoms:");
+            System.Console.WriteLine();
+
+            IEnumerator<string> enumerator = list.GetEnumerator();
+
+            for (int i = list.Count; i > 0; i--)
+            {
+                enumerator.MoveNext();
+                System.Console.WriteLine(enumerator.Current);
             }
         }
     }
